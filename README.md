@@ -1,2 +1,3 @@
-# song-todo
-## nomad coder 참고해서 react-native 공부중 ...
+# 👨🏻‍💻 React-Navtice Practice
+
+This is the repository to practice making App with React-Navtice and related libraries.
