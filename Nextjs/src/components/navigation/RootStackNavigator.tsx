@@ -7,10 +7,12 @@ import Intro from '../screen/Intro';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import Temp from '../screen/Temp';
+import MainNavigator from './MainStackNavigator';
 
 export type RootStackParamList = {
   default: undefined;
   Intro: undefined;
+  Main: undefined;
   Temp: { param: string };
 };
 
@@ -36,7 +38,8 @@ function RootNavigator(): React.ReactElement {
         }}
         headerMode={themeType === ThemeType.DARK ? 'screen' : 'float'}
       >
-        <Stack.Screen name="Intro" component={Intro} />
+        {/* ROUTER CHANGE  */}
+        <Stack.Screen name="Main" component={MainNavigator} />
         <Stack.Screen name="Temp" component={Temp} />
       </Stack.Navigator>
     </NavigationContainer>
