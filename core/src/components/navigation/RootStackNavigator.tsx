@@ -8,7 +8,6 @@ import React from 'react'; ``
 export type RootStackParamList = {
   default: undefined;
   Intro: undefined;
-  Temp: { param: string };
 }
 
 export type RootStackNavigationProps<
