@@ -3,17 +3,15 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import { ThemeType, useThemeContext } from '../../providers/ThemeProvider';
-import Intro from '../screen/Intro';
+
+import MainNavigator from './MainStackNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import Temp from '../screen/Temp';
-import MainNavigator from './MainStackNavigator';
 
 export type RootStackParamList = {
   default: undefined;
   Intro: undefined;
-  Main: undefined;
-  Temp: { param: string };
+  Home: undefined;
 };
 
 export type RootStackNavigationProps<
@@ -27,7 +25,7 @@ function RootNavigator(): React.ReactElement {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Intro"
+        initialRouteName="Home"
         screenOptions={{
           headerShown: false,
           headerStyle: {
@@ -39,8 +37,7 @@ function RootNavigator(): React.ReactElement {
         headerMode={themeType === ThemeType.DARK ? 'screen' : 'float'}
       >
         {/* ROUTER CHANGE  */}
-        <Stack.Screen name="Main" component={MainNavigator} />
-        <Stack.Screen name="Temp" component={Temp} />
+        <Stack.Screen name="Home" component={MainNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

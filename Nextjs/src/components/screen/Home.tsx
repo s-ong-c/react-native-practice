@@ -1,11 +1,11 @@
+import PageResponsive from './common/PageResponsive';
+import PageTemplate from './common/PageTemplate';
 import React from 'react';
 import { RootStackNavigationProps } from '../navigation/RootStackNavigator';
+import { Text } from 'react-native';
 import { User } from '../../types';
 import styled from 'styled-components/native';
 import { useThemeContext } from '../../providers/ThemeProvider';
-import { Text } from 'react-native';
-import PageResponsive from './common/PageResponsive';
-import PageTemplate from './common/PageTemplate';
 const Container = styled.View`
   flex: 1;
   width: 100%;
@@ -51,7 +51,7 @@ function Home(props: Props): React.ReactElement {
     <PageResponsive>
       <PageTemplate>
         <PageTemplate.Main>
-          <Text>여기가 메인화면 HITHERE</Text>
+          <Text>여기가123 메인화면 HITHERE</Text>
           {/* <Container></Container> */}
         </PageTemplate.Main>
         <PageTemplate.Right>
