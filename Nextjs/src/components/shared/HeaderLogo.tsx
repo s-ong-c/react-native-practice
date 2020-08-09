@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Animated, Text } from 'react-native';
+
+import { Text } from 'react-native';
 import styled from 'styled-components/native';
 
-const createFallbackTitle = (username: string | null) => {
+const createFallbackTitle = (username: string | null): string | null => {
   if (!username) return null;
   const lastChar = username.slice(-1).toLowerCase();
   if (lastChar === 's') {
@@ -21,8 +22,6 @@ export interface HeaderLogoProps {
 }
 
 const HeaderLogo: React.FC<HeaderLogoProps> = ({ logoTitle }) => {
-  const fadeAnim = new Animated.Value(0);
-
   return (
     <HeaderLogoBlock>
       <Text style={{ fontSize: 21 }}>{createFallbackTitle(logoTitle)}</Text>
